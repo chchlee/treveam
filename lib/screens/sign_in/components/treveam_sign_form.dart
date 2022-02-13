@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:treveam/constants.dart';
 import 'package:treveam/screens/components/default_button.dart';
+import 'package:treveam/screens/sign_in/components/form_error.dart';
+import 'package:treveam/screens/sign_in/signin_screen.dart';
 
 class TreveamSignForm extends StatefulWidget {
 
@@ -22,7 +25,9 @@ class _TreveamSignFormState extends State<TreveamSignForm> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+            _buildIdField(),
             SizedBox(height: 12),
+            _buildPasswordField(),
             SizedBox(height: 20,),
             DefaultButton(
               text: "로그인",
@@ -36,9 +41,67 @@ class _TreveamSignFormState extends State<TreveamSignForm> {
               },
             ),
             SizedBox(height:10),
+            FormError(errors: errors),
           ],
         ),
       )
     );
+  }
+  TextFormField _buildIdField(){
+    return TextFormField(
+      onSaved: ((newValue) => id = newValue),
+      onChanged: (value) {
+        if ( value.isNotEmpty & errors.contains(kIdNull)){
+          setState(() {
+            errors.remove(kIdNull);
+          });
+        }
+      },
+      validator: (value) {
+        if ( value!.isEmpty & !errors.contains(kIdNull)){
+          setState(() {
+            errors.add(kIdNull);
+          });
+        }
+        return null;
+      },
+      decoration: InputDecoration(
+        border: outlineInputBorder(kTextColor),
+        focusedBorder: outlineInputBorder(kPrimaryColor),
+        errorBorder: outlineInputBorder(kPrimaryColor),
+        disabledBorder: InputBorder.none,
+        contentPadding: EdgeInsets.only(left:16, top: 15, bottom: 15),
+        filled: true,
+        fillColor: Colors.white,
+        hintStyle: TextStyle(color: Colors.grey[400],fontSize: 18),
+        hintText: kIdNull,
+      ),
+    );
+  }
+
+  TextFormField _buildPasswordField(){
+    return TextFormField(
+      obscureText: true,
+      onSaved: (newValue) => password = newValue,
+      onChanged: (value){
+        if(value.isNotEmpty & errors.contains(kPasswordNull)){
+          setState(() {
+            errors.add(kPasswordNull);
+          });
+        }
+        return null;
+      },
+      decoration: InputDecoration(
+        border: outlineInputBorder(kTextColor),
+        focusedBorder:  outlineInputBorder(kPrimaryColor),
+        errorBorder: outlineInputBorder(kPrimaryColor),
+        disabledBorder: InputBorder.none,
+        contentPadding: EdgeInsets.only(left: 16, top: 15, bottom: 15),
+        filled: true,
+        fillColor: Colors.white,
+        hintStyle: TextStyle(color: Colors.grey[400], fontSize: 18),
+        hintText: kPasswordNull,
+      ),
+    )
   }
 }
