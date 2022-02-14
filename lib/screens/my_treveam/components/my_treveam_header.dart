@@ -2,7 +2,7 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:treveam/screens/components/default_button.dart';
-import 'package:treveam/screens/sign_in/singin_screen.dart';
+import 'package:treveam/screens/sign_in/signin_screen.dart';
 
 class MyTreveamHeader extends StatelessWidget {
 

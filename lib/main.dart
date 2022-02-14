@@ -3,10 +3,10 @@ import 'package:treveam/routes.dart';
 import 'package:treveam/screens/splash/splash_screen.dart';
 import 'package:treveam/theme.dart';
 
-void main() => runApp(UI());
+void main() => runApp(TreveamUI());
 
-class UI extends StatelessWidget {
-  const UI({ Key? key }) : super(key: key);
+class TreveamUI extends StatelessWidget {
+  const TreveamUI({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

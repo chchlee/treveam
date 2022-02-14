@@ -47,6 +47,9 @@ class _TreveamSignFormState extends State<TreveamSignForm> {
       )
     );
   }
+  OutlineInputBorder outlineInputBorder(Color color){
+    return OutlineInputBorder(borderSide: BorderSide(color: color, width: 1));
+  }
   TextFormField _buildIdField(){
     return TextFormField(
       onSaved: ((newValue) => id = newValue),
@@ -102,6 +105,6 @@ class _TreveamSignFormState extends State<TreveamSignForm> {
         hintStyle: TextStyle(color: Colors.grey[400], fontSize: 18),
         hintText: kPasswordNull,
       ),
-    )
+    );
   }
 }
