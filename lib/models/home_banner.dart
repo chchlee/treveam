@@ -1,9 +1,19 @@
-// 홈 배너 페이지
-// class Product{
-//   final String? imageURL;
-//   final String? title;
-//   final int? price;
-//   final int? discount;
+import 'package:flutter/material.dart';
 
-//   Product
-// } 
+class HomeBanner {
+  final String bannerImage;
+  final String eventTitle;
+  final String eventContent;
+
+  HomeBanner(
+    {
+      required this.eventTitle,
+      required this.eventContent,
+      required this.bannerImage,
+    }
+  );
+}
+
+List<HomeBanner> homeBannerList = [
+  HomeBanner(eventTitle: "bannerimage", eventContent: "eventContent", bannerImage: "bannerImage")
+];

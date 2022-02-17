@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:treveam/models/home_banner.dart';
 import 'package:treveam/screens/home/components/box_border_text.dart';
 import 'package:treveam/screens/home/components/number_indicator.dart';
 
 class TreveamBannerItem extends StatefulWidget {
-  const TreveamBannerItem({ Key? key }) : super(key: key);
-
   @override
   State<TreveamBannerItem> createState() => _TreveamBannerItemState();
 }
@@ -16,9 +15,9 @@ class _TreveamBannerItemState extends State<TreveamBannerItem> {
   Widget build(BuildContext context) {
     return Stack(
       children : [
-        PageView().builder(
+        PageView.builder(
           itemCount : list.length,
-          itemBuilder : (conetxt, length){
+          itemBuilder : (context, index){
             return Stack(
               children: [
                 Container(
@@ -36,7 +35,7 @@ class _TreveamBannerItemState extends State<TreveamBannerItem> {
                     title: list[index].eventTitle,
                     subTitle: list[index].eventContent,
                   ),
-                )
+                ),
               ],
             );
           },
