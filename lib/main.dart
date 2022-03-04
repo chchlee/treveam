@@ -1,21 +1,24 @@
+import 'package:treveam/screens/main_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:treveam/routes.dart';
-import 'package:treveam/screens/splash/splash_screen.dart';
-import 'package:treveam/theme.dart';
 
-void main() => runApp(UI());
+void main() {
+  runApp(MyApp());
+}
 
-class UI extends StatelessWidget {
-  const UI({ Key? key }) : super(key: key);
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'UI',
-      initialRoute: SplashScreen.routeName,
-      routes: route,
-      theme: theme(),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          elevation: 0.0,
+          backgroundColor: Colors.white,
+          titleTextStyle: TextStyle(color: Colors.black, fontSize: 24),
+          iconTheme: IconThemeData(color: Colors.black),
+        ),
+      ),
+      home: MainScreen(),
     );
   }
 }
