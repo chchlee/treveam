@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:treveam/screens/map_screen.dart';
 import 'chat_screen.dart';
 import 'friend_screen.dart';
 import 'more_screen.dart';
@@ -18,6 +19,7 @@ class _MainScreenState extends State<MainScreen> {
       body: IndexedStack(
         index: _selectedIndex,
         children: [
+          MapSample(),
           FriendScreen(),
           ChatScreen(),
           MoreScreen(),
@@ -36,6 +38,10 @@ class _MainScreenState extends State<MainScreen> {
           });
         },
         items: [
+          BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.home),
+            label: "",
+          ),
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.user),
             label: "",
