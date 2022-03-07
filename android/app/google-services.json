@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "373098043743",
+    "project_id": "treveam",
+    "storage_bucket": "treveam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373098043743:android:52c4e850d92ce6463dbeea",
+        "android_client_info": {
+          "package_name": "com.example.treveam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373098043743-do0hrj9gic7fsepmbren11pea27t0455.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.treveam",
+            "certificate_hash": "83698a111477edeb04987bdc665e62cc5f58fdd4"
+          }
+        },
+        {
+          "client_id": "373098043743-ujpo0iv3uaavc3q9s4dm3ui76tnsvd70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA38cdngJBXuRSHGKJ__saGJVc243euYqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373098043743-ujpo0iv3uaavc3q9s4dm3ui76tnsvd70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
