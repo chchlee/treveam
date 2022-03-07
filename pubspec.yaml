@@ -36,9 +36,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^9.0.0
   intl: ^0.17.0
-  google_maps_flutter: ^2.0.3
-  google_maps_flutter_web: ^0.3.0
-  pointer_interceptor: ^0.9.0 # So the fAB doesn't cause a click on the Map.  
+  location: ^4.3.0
+  google_maps_flutter: ^2.0.6
+
+
+
+
 
 dev_dependencies:
   flutter_test:
